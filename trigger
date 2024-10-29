@@ -1,5 +1,5 @@
 // Trigger 1: Automatically create a welcome case when a new student is created
-trigger StudentTrigger on Student__c (after insert) {
+ trigger StudentTrigger on Student__c (after insert) {
     List<Case> casesToInsert = new List<Case>();
     
     for(Student__c student : Trigger.new) {
